@@ -1,0 +1,7 @@
+block    ::= stmt
+           | '{' stmt* '}'
+stmt     ::= ( expr | 'do' block 'while' '(' expr ')' ) ';'
+           | ( ( 'if' | 'while' ) '(' expr ')' )? block
+expr     ::= ID
+           | CONST
+           | expr ( '+' | '-' | '*' ) expr
